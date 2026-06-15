@@ -436,11 +436,6 @@ margin-bottom: 18px;
   gap: 16px;
 }
  
-.review-card:hover {
-  border-color: var(--green);
-  box-shadow: 0 4px 12px #cccccc;
-}
- 
 .review-stars {
   color: #f59e0b;
   font-size: 18px;
