@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VERD - Fresh Footwear</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- navbar -->
+<!-- added brand logo, navigation skills, login button and sign up button.
+flexbox used to allign the items horizontally and maintain proper spacing.
+for mobile, navigation links and hamburger icon is hidden-->
+<header class="navbar">
+<nav class="nav-inner">
+
+<a href="#" class="logo">VERD</a>
+
+<div class="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<ul class="nav-links">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#features">Features</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#faq">FAQ</a></li>
+  <li><a href="#reviews">Reviews</a></li>
+  <li><a href="#footer">Contact</a></li>
+</ul>
+
+<div class="nav-buttons">
+  <a href="#" class="btn btn-outline">Login</a>
+  <a href="#" class="btn btn-green">Sign Up</a>
+</div>
+
+</nav>
+</header>
+
+<main>
+
+<!-- hero section -->
+<!-- fisrt dection users see. contains heading, description, 
+Cta buttons and a shoe image. flex box used to place 
+image and text side by side on desktop. on mobile device, layout 
+changes to vertical coloumn.-->
+<section class="hero" id="home">
+
+<div class="hero-text">
+<p class="small-tag">New Arrivals 2025</p>
+<h1 class="hero-heading">Step Into Something Better</h1>
+<p class="hero-para">
+Shoes made for real life. Comfortable, stylish and built
+to last no matter where you go or what you do.
+</p>
+<div class="hero-buttons">
+<a href="#" class="btn btn-green">Shop Now</a>
+<a href="#about" class="btn btn-outline">Learn More</a>
+</div>
+</div>
+
+<div class="hero-image">
+  <img
+   src="images/hero-shoe.png"
+   alt="VERD shoe"
+  class="shoe-img"
+   onerror="this.src='https://placehold.co/480x380/f0f0f0/22c55e?text=VERD+Shoe'"
+        />
+</div>
+
+</section>
+
+<!-- features section -->
+<!-- features section contains 4 features. every feature contains icon, title
+  , description. flex box used to arrange the cards evenly and hover 
+  effects to imporve user interaction.-->
+<section class="features" id="features">
+<div class="section-top">
+<p class="small-tag">Why Choose Us</p>
+<h2 class="section-heading">What Makes Us Different</h2>
+</div>
+
+<div class="cards-row">
+
+<div class="feature-card">
+<img
+src="images/feature1.png"
+alt="lightweight"
+class="card-icon"
+onerror="this.src='https://placehold.co/55x55/22c55e/fff?text=1'"
+/>
+<h3 class="card-title">Lightweight</h3>
+<p class="card-text">
+Our shoes weigh almost nothing. You will forget
+you are even wearing them after the first hour.
+</p>
+</div>
+
+<div class="feature-card">
+<img
+src="images/feature2.png"
+alt="grip"
+class="card-icon"
+onerror="this.src='https://placehold.co/55x55/22c55e/fff?text=2'"
+          />
+<h3 class="card-title">Strong Grip</h3>
+<p class="card-text">
+The outsole holds firm on any surface so you
+never slip whether its wet or dry outside.
+</p>
+</div>
+
+<div class="feature-card">
+<img
+src="images/feature3.png"
+alt="breathable"
+class="card-icon"
+onerror="this.src='https://placehold.co/55x55/22c55e/fff?text=3'"
+/>
+<h3 class="card-title">Breathable</h3>
+<p class="card-text">
+The mesh upper keeps your feet cool and fresh
+even after a long day of walking around.
+</p>
+</div>
+
+<div class="feature-card">
+<img
+src="images/feature4.png"
+alt="durable"
+class="card-icon"
+onerror="this.src='https://placehold.co/55x55/22c55e/fff?text=4'"
+/>
+<h3 class="card-title">Long Lasting</h3>
+<p class="card-text">
+Built with strong materials that hold up over time.
+These shoes are made to last for years.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- about section -->
+<!-- two columns layout with an image on the left and text on right.
+ on smaller , the layout stacks vertical for better responsiveness.-->
+<section class="about" id="about">
+
+<div class="about-image">
+<img
+src="images/about-shoe.png"
+alt="VERD shoe closeup"
+class="about-img"
+onerror="this.src='https://placehold.co/500x420/f0f0f0/22c55e?text=VERD'"
+/>
+</div>
+
+<div class="about-text">
+<p class="small-tag">Our Story</p>
+<h2 class="section-heading">We Make Shoes For Real People</h2>
+<p class="about-para">
+VERD started in 2020 by two friends who were tired of buying
+expensive shoes that fell apart after a few months. We decided
+to build something better and more affordable for everyone.
+</p>
+<p class="about-para">
+Every shoe we make goes through strict quality checks before
+it reaches you. We care about comfort, style and durability
+in every single pair we produce.
+</p>
+<a href="#" class="btn btn-green">Read More</a>
+</div>
+</section>
+
+<!-- FAQ section
+ added frequently asked questions answers  -->
+<section class="faq" id="faq">
+<div class="section-top">
+<p class="small-tag">Questions</p>
+<h2 class="section-heading">Frequently Asked Questions</h2>
+</div>
+<div class = "faq-container">
+
+<!-- 1 -->
+<div class="faq-item">
+<h3>Are VERD shoes suitable for daily use?</h3>
+<p>
+Yes, our shoes are designed for everyday comfort.
+</p>
+</div>
+<!-- 2 -->
+<div class = "faq-item">
+<h3>Do you offer free shipping?</h3>
+<p>
+Yes, provide free shipping.
+</p>
+</div>
+
+<!-- 3 -->
+<div class = "faq-item">
+<h3>Return policy?</h3>
+<p>
+Yes, return policy avaiable.
+</p>
+</div>
+</div>
+</section>
+
+
+<!-- Reviews Section 
+ displays the reviews given by cutomers-->
+<section class="reviews" id="reviews">
+<div class="section-top">
+<p class="small-tag">Reviews</p>
+<h2 class="section-heading">What Our Customers Say</h2>
+</div>
+
+<div class="reviews-row">
+
+<!-- 1 -->
+<div class="review-card">
+<p class="review-text">
+"comfortable shoes."
+</p>
+<h4 class="review-name">ABC</h4>
+</div>
+
+<!-- 2 -->
+<div class="review-card">
+<p class="review-text">
+"good quality."
+</p>
+<h4 class="review-name">DEF</h4>
+</div>
+
+<!-- 3 -->
+<div class="review-card">
+<p class="review-text">
+"lightweight."
+</p>
+<h4 class="review-name">XYZ</h4>
+</div>
+</div>
+</section>
+
+
+
+</main>
+
+
+<!-- footer -->
+<!-- footer contains the brandname , quick lines, social media linka
+and copy rights . flex box used for allignment and added hover effects
+to links-->
+<footer class="footer" id="footer">
+
+<div class="footer-inner">
+
+<div class="footer-brand">
+<span class="logo">VERD</span>
+<p class="footer-tagline">Step Into Something Better.</p>
+ </div>
+
+<div class="footer-links">
+<h4 class="footer-title">Quick Links</h4>
+ <ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#">Shop</a></li>
+</ul>
+</div>
+
+<div class="footer-social">
+<h4 class="footer-title">Follow Us</h4>
+<ul>
+<li><a href="#">Instagram</a></li>
+<li><a href="#">Twitter</a></li>
+<li><a href="#">YouTube</a></li>
+<li><a href="#">TikTok</a></li>
+ </ul>
+</div>
+
+</div>
+<div class="footer-bottom">
+<p>&copy; 2025 VERD Footwear. All rights reserved.</p>
+</div>
+</footer>
+</body>
+</html>

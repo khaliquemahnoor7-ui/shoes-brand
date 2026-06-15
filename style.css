@@ -1,0 +1,563 @@
+/* 1. Variables
+varaibles stores commonly used colours throughput the website.
+maintaianability because colours can be chnages from one place
+insted of changing at multiple places manually */
+:root {
+--green: #22c55e;
+--green-dark: #16a34a;
+--bg: #ffffff;
+--bg-light: #f5f5f5;
+--text: #111111;
+--text-gray: #555555;
+--border: #dddddd;
+}
+
+
+/* 2. Reset
+browsers apply default margin and padding values which
+can create inconsistent layouts across different browers.
+this reset manually removes all default spacing and ensures 
+predictable sisizng behaviour using border box*/
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+/* Enables smooth scrolling when users click navigation
+   links that point to sections within the same page.*/
+html { scroll-behavior: smooth;}
+
+body {
+font-family: Arial, sans-serif;
+background-color: var(--bg);
+color: var(--text);
+font-size: 16px;
+line-height: 1.6;
+}
+
+img {
+display: block;
+max-width: 100%;
+height: auto;
+}
+
+ul { list-style: none;}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+
+/* 3. Buttons 
+This reusable button class provides common styling
+shared by all buttons throughout the website. Features are consistent padding
+rounded corners , hover animation support, pointer cursor for interaction*/
+.btn {
+display: inline-block;
+padding: 10px 22px;
+border-radius: 6px;
+font-size: 15px;
+font-weight: 600;
+cursor: pointer;
+transition: background-color 0.2s, color 0.2s;
+}
+/* Primary button
+   Used for important actions such as Shop Now Sign Up Read More */
+.btn-green {
+background-color: var(--green);
+color: #ffffff;
+border: 2px solid var(--green);
+}
+/* Primary button hover effect 
+   Darkens the button color when the user hovers over it.
+   This provides visual feedback and improves usability. */
+.btn-green:hover {
+background-color: var(--green-dark);
+border-color: var(--green-dark);
+}
+
+.btn-outline {
+background-color: transparent;
+color: var(--text);
+border: 2px solid var(--border);
+}
+
+.btn-outline:hover {
+border-color: var(--green);
+color: var(--green);
+}
+
+/* 4. Navbar
+The navbar remains visible while scrolling using sticky positioning. This improves accessibility
+because users can navigate the page at any time.
+ */
+.navbar {
+position: sticky;
+top: 0;
+background-color: #ffffff;
+border-bottom: 1px solid var(--border);
+height: 68px;
+z-index: 100; /* z-index ensures the navbar stays above other content.*/
+}
+/* Navbar container
+Uses Flexbox to align: Logo ,navigation links action buttons
+width:90% creates responsive spacing. */
+.nav-inner {
+width: 90%;
+ /*  max-width prevents excessive stretching on large screens. */
+max-width: 1200px;
+height: 100%;
+margin: 0 auto;
+/*  Creates flexible layouts. */
+display: flex;
+justify-content: space-between; /*  Controls horizontal alignment. */
+align-items: center; /*  Controls vertical alignment. Makes items appear centered. */
+gap: 30px; /*  Creates spacing between flex items. */
+}
+
+.logo {
+font-size: 24px;
+font-weight: 800;
+color: var(--text);
+letter-spacing: 2px;
+}
+
+.logo:hover {
+color: var(--green);
+}
+
+/* Navigation links
+Flexbox arranges navigation items horizontally.
+Gap property creates equal spacing between links.
+ */
+.nav-links {
+display: flex;
+align-items: center;
+gap: 30px;
+flex: 1;
+justify-content: center;
+}
+
+.nav-links a {
+font-size: 15px;
+color: var(--text-gray);
+}
+
+.nav-links a:hover {
+color: var(--green);
+}
+
+.nav-buttons {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+/* hamburger */
+.hamburger {
+display: none;
+flex-direction: column;
+gap: 5px;
+cursor: pointer;
+}
+
+.hamburger span {
+display: block;
+width: 25px;
+height: 2px;
+background-color: var(--text);
+border-radius: 2px;
+}
+
+
+/* 5. Hero Section 
+First section visible to users.
+Layout: Text content on the left ,Product image on the right
+Flexbox creates a clean two-column layout.
+ min-height ensures strong visual presence. */
+.hero {
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 80px 0;
+  
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 50px;
+ 
+min-height: calc(100vh - 68px); /* min-height ensures strong visual presence. */
+}
+
+.hero-text {
+flex: 1;
+max-width: 520px;
+}
+
+.small-tag {
+font-size: 13px;
+font-weight: 600;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: var(--green);
+margin-bottom: 14px;
+}
+
+
+.hero-heading {
+font-size: 52px;
+font-weight: 800;
+line-height: 1.1;
+color: var(--text);
+margin-bottom: 18px;
+}
+
+.hero-para {
+font-size: 16px;
+color: var(--text-gray);
+line-height: 1.7;
+margin-bottom: 30px;
+max-width: 440px;
+}
+
+.hero-buttons {
+display: flex;
+align-items: center;
+gap: 14px;
+}
+
+.hero-image {
+flex: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+max-width: 500px;
+}
+
+.shoe-img {
+width: 100%;
+border-radius: 12px;
+}
+
+
+/* 6. Features Section 
+Displays the key selling points of the product.
+Light gray background visually separates this
+section from the rest of the page. */
+.features {
+background-color: var(--bg-light);
+padding: 80px 0;
+}
+
+.section-top {
+width: 90%;
+max-width: 1200px;
+margin: 0 auto 50px auto;
+}
+
+.section-heading {
+font-size: 36px;
+font-weight: 800;
+color: var(--text);
+margin-top: 8px;
+}
+
+.cards-row {
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+/* align-items: stretch ensures cards remain
+   the same height even if content length differs.*/
+align-items: stretch;
+gap: 20px;
+}
+
+.feature-card {
+flex: 1;
+background-color: #ffffff;
+border: 1px solid var(--border);
+border-radius: 10px;
+padding: 30px 20px;
+display: flex;
+/* Changes layout direction.*/
+flex-direction: column;
+gap: 12px;
+}
+
+.feature-card:hover {
+border-color: var(--green);
+box-shadow: 0 4px 12px #cccccc;
+}
+
+.card-icon {
+width: 55px;
+height: 55px;
+object-fit: contain;
+border-radius: 8px;
+}
+
+.card-title {
+font-size: 18px;
+font-weight: 700;
+color: var(--text);
+}
+
+.card-text {
+font-size: 14px;
+color: var(--text-gray);
+line-height: 1.7;
+}
+
+
+/* 7. About Section 
+Two-column layout: Product image Company information
+Provides users with brand background and mission.*/
+.about {
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 80px 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 60px;
+}
+
+.about-image {
+position: relative;
+flex: 1;
+max-width: 500px;
+}
+
+.about-img {
+width: 100%;
+border-radius: 12px;
+border: 1px solid var(--border);
+}
+
+.about-text {
+flex: 1;
+max-width: 500px;
+}
+
+.about-para {
+font-size: 15px;
+color: var(--text-gray);
+line-height: 1.8;
+margin-bottom: 18px;
+}
+
+/* FAQ Section */
+.faq {
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 80px 0;
+
+}
+
+.faq-container
+{
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.faq-item {
+background-color: #ffffff;
+border: 1px solid var(--border);
+border-radius: 10px;
+padding: 24px;
+}
+
+.faq-item h3 {
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+.faq-item p {
+color: var(--text-gray);
+}
+
+
+
+/* Reviews Section */
+.reviews {
+background-color: var(--bg-light);
+padding: 80px 0;
+}
+
+.reviews-row {
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+gap: 20px;
+}
+
+.review-card {
+flex: 1;
+background-color: #ffffff;
+border: 1px solid var(--border);
+border-radius: 10px;
+padding: 30px;
+transition: 0.2s;
+}
+
+.review-card:hover {
+border-color: var(--green);
+box-shadow: 0 4px 12px #cccccc;
+}
+
+.review-text {
+color: var(--text-gray);
+margin-bottom: 20px;
+line-height: 1.7;
+}
+
+.review-name {
+color: var(--text);
+font-size: 16px;
+}
+
+/* 8. Footer 
+Contains: Brand information, Quick navigation links, Social media links
+Acts as the final section of the website and
+provides additional navigation opportunities.*/
+.footer {
+background-color: var(--bg-light);
+border-top: 1px solid var(--border);
+padding-top: 60px;
+}
+
+.footer-inner {
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;display: flex;
+justify-content: space-between;
+align-items: flex-start;
+gap: 40px;
+padding-bottom: 40px;
+}
+
+.footer-brand .logo {
+display: block;
+font-size: 22px;
+margin-bottom: 8px;
+}
+
+.footer-tagline {
+font-size: 13px;
+color: var(--text-gray);
+}
+
+.footer-title {
+font-size: 15px;
+font-weight: 700;
+color: var(--text);
+margin-bottom: 14px;
+}
+
+.footer-links ul,
+.footer-social ul {
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+.footer-links a,
+.footer-social a {
+font-size: 14px;
+color: var(--text-gray);
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+color: var(--green);
+}
+
+.footer-bottom {
+  /* Creates responsive containers.*/
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px 0;
+border-top: 1px solid var(--border);
+text-align: center;
+}
+
+.footer-bottom p {
+font-size: 13px;
+color: var(--text-gray);
+}
+
+
+/* 9. Tablet - max 1024px*/
+@media (max-width: 1024px) {
+  .hero-heading {
+font-size: 42px;}
+
+.cards-row {
+flex-wrap: wrap;
+  }
+  .feature-card {
+flex-basis: calc(50% - 20px);
+flex-grow: 0;}
+}
+
+
+/* 10. Mobile - max 768px */
+@media (max-width: 768px) {
+
+/* hide nav links and buttons */
+.nav-links,
+.nav-buttons {
+display: none;}
+
+/* show hamburger */
+.hamburger {
+display: flex;}
+
+  /* hero stacks vertically */
+.hero {
+flex-direction: column;
+text-align: center;
+padding: 50px 0;
+min-height: auto;
+gap: 30px;}
+
+.hero-text { max-width: 100%;}
+.hero-para { max-width: 100%;
+  }
+.hero-buttons {justify-content: center;}
+.hero-image { max-width: 300px;
+ width: 100%;}
+.hero-heading {
+font-size: 36px;}
+/* features stack vertically */
+.cards-row {
+  flex-direction: column;}
+.feature-card {
+flex-basis: auto;
+}
+/* about stacks vertically */
+.about {
+flex-direction: column;
+gap: 30px;
+}
+.about-image {
+  max-width: 100%;
+  width: 100%;}
+.about-text {
+  max-width: 100%;
+  }
+/* footer stacks vertically */
+.footer-inner {
+flex-direction: column;
+gap: 30px;}
+
+.reviews-row{flex-direction: column;}
+}
