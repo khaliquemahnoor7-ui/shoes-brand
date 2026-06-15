@@ -287,11 +287,6 @@ flex-direction: column;
 gap: 12px;
 }
 
-.feature-card:hover {
-border-color: var(--green);
-box-shadow: 0 4px 12px #cccccc;
-}
-
 .card-icon {
 width: 55px;
 height: 55px;
