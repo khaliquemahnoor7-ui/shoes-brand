@@ -352,75 +352,144 @@ margin-bottom: 18px;
 
 /* FAQ Section */
 .faq {
-width: 90%;
-max-width: 1200px;
-margin: 0 auto;
-padding: 80px 0;
-
+  padding: 80px 0;
+  background-color: var(--bg);
 }
-
-.faq-container
-{
-display: flex;
-flex-direction: column;
-gap: 20px;
+ 
+.faq-list {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-
+ 
 .faq-item {
-background-color: #ffffff;
-border: 1px solid var(--border);
-border-radius: 10px;
-padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px 24px;
+  transition: 0.2s;
 }
 
-.faq-item h3 {
-font-size: 18px;
-margin-bottom: 10px;
+.faq-item:hover {
+  border-color: var(--green);
+}
+ 
+/* the question text the user clicks on */
+.faq-question {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  cursor: pointer;
+  list-style: none;
+}
+ 
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+ 
+/* added a plus sign */
+.faq-question::after {
+  content: "+";
+  float: right;
+  font-size: 20px;
+  color: var(--green);
+}
+ 
+/* changes plus sign to minus sign when faq item is open */
+.faq-item[open] .faq-question::after {
+  content: "−";
+}
+ 
+.faq-answer {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+
+  font-size: 14px;
+  color: var(--text-gray);
+  line-height: 1.8;
 }
 
-.faq-item p {
-color: var(--text-gray);
-}
 
-
-
-/* Reviews Section */
+* Reviews Section */
 .reviews {
-background-color: var(--bg-light);
-padding: 80px 0;
+  background-color: var(--bg-light);
+  padding: 80px 0;
 }
-
+ 
 .reviews-row {
-width: 90%;
-max-width: 1200px;
-margin: 0 auto;
-display: flex;
-gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
 }
-
+ 
 .review-card {
-flex: 1;
-background-color: #ffffff;
-border: 1px solid var(--border);
-border-radius: 10px;
-padding: 30px;
-transition: 0.2s;
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-
+ 
 .review-card:hover {
-border-color: var(--green);
-box-shadow: 0 4px 12px #cccccc;
+  border-color: var(--green);
+  box-shadow: 0 4px 12px #cccccc;
 }
-
+ 
+.review-stars {
+  color: #f59e0b;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+ 
 .review-text {
-color: var(--text-gray);
-margin-bottom: 20px;
-line-height: 1.7;
+  font-size: 14px;
+  color: var(--text-gray);
+  line-height: 1.8;
+  flex: 1;
 }
-
+ 
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+ 
+.review-avatar {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--green);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+ 
 .review-name {
-color: var(--text);
-font-size: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+ 
+.review-role {
+  font-size: 12px;
+  color: var(--text-gray);
 }
 
 /* 8. Footer 
